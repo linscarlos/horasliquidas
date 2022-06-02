@@ -128,3 +128,5 @@ export const data30 = {
         }
     ],
 }
+
+export default data;

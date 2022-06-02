@@ -11,7 +11,7 @@ import {
     Legend,
   } from 'chart.js';
 
-export function MainStats() {
+export default function MainStats() {
 
     ChartJS.register(
         CategoryScale,
