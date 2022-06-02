@@ -1,0 +1,68 @@
+@font-face {
+  font-family: 'Digital';
+  src: url('/fonts/clockicons.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  text-decoration: none;
+}
+
+:root {
+  --white: #FFFFFF;
+
+  --gray-main: #F8F9FF;
+  --gray-button: #F2F4FD;
+
+  --blue-button: #017EFA;
+  --blue-navy: #081A51;
+  --blue-heading: #1C1F37;
+  --red-button: #CF3A59;
+  --yellow-button: #FBAD10;
+  --green-button: #59c00b;
+
+  /* 1rem = 16px (User Agent) = 100% (user agent) 
+    / transforma em 10% do User Agent*/
+    font-size: 62.5%;
+}
+
+@media (max-width: 1480px){
+  html {
+      // font-size: 93.75%; 
+  }
+}
+
+// @media (max-width: 728px){
+//   html{
+//       // font-size: 87.5%; 
+//   }
+// }
+
+body {
+  background: var(--gray-main);
+  color: black;
+}
+
+body, input, textarea, select, button {
+  font: 400 1rem "Poppins", sans-serif;
+}
+
+button {
+  cursor: pointer;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #FFFFFF;
+
+    padding: 0.9rem 1.6rem;
+    border-radius: 6px;
+}
+
+a {
+  color: inherit;
+}
+

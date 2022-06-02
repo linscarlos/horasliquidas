@@ -1,0 +1,114 @@
+.modalOverlay{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.7);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+
+    z-index: 999;
+
+    &.active{
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.modal{
+    background: #f0f2f5;
+    padding: 2.4rem;
+
+    margin-bottom: 5rem;
+
+    position: relative;
+    z-index: 1;
+}
+
+/* FORM ============================= */
+.form{
+    max-width: 40rem;
+    
+    padding: 3rem 0;
+
+    
+
+    .selectGruop{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 5rem;
+
+        .inputGroup{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 1rem;
+
+            p{
+                font-weight: 600;
+                padding-bottom: 8
+                px;
+            }
+        
+            small{
+                opacity: 0.4;
+            }
+
+            select{
+                border: none;
+                border-radius: 0.2rem;
+
+                padding: 0.8rem;
+                width: 100%;
+
+                max-width: 7rem;
+                font-size: 24px;
+                font-weight: 400;
+                
+            }
+        
+        }
+    }
+}
+
+.inputButtons{
+    margin-top: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+
+    small{
+        opacity: 0.4;
+    }
+
+}
+
+.actions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.button, button{
+        // width: 48%;
+        // padding: 0rem 2rem;
+
+        margin: 1rem;
+    }
+
+    #cancel{
+        background-color: var(--red-button);
+    }
+
+    #save{
+        background-color: var(--blue-button);
+    }
+}

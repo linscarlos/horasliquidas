@@ -1,0 +1,19 @@
+.headerContainer {
+        grid-area: header;
+        background: var(--gray-main);
+        height: 90px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        border-bottom: 1px solid #DADADA;
+    
+        h1{
+            font-size: 3.2rem;
+            font-weight: 600;
+            color: var(--blue-navy);
+            
+            margin-left: 1.4rem;
+        }
+}
