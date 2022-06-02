@@ -129,4 +129,6 @@ export const data30 = {
     ],
 }
 
-export default data;
+export default function DataCharts() {
+
+}
