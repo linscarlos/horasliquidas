@@ -3,7 +3,7 @@ import Head from 'next/head'
 import styles from '../../styles/Home.module.scss'
 import { Header } from '../../src/components/Header'
 import { Sidenav } from '../../src/components/Sidenav'
-import { MainStats } from './stats' 
+import MainStats from './stats' 
 
 const Home: NextPage = () => {
 
