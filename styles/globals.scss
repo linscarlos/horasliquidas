@@ -31,15 +31,22 @@
     font-size: 62.5%;
 }
 
-@media (max-width: 1480px){
-  html {
-      // font-size: 93.75%; 
-  }
-}
+// @media (max-width: 1480px){
+//   html {
+//      font-size: 93.75%; 
+//   }
+// }
 
-// @media (max-width: 728px){
+// @media (max-width: 1024px){
 //   html{
-//       // font-size: 87.5%; 
+//       font-size: 87.5%;
+
+//   }
+// }
+
+// @media (max-width: 768px){
+//   html{
+//       font-size: 100%;
 //   }
 // }
 
@@ -60,9 +67,20 @@ button {
 
     padding: 0.9rem 1.6rem;
     border-radius: 6px;
+
+    transition: filter 0.2s;
+
+    &:hover{
+      filter: brightness(0.95);
+    }
 }
 
 a {
   color: inherit;
-}
 
+  transition: filter 0.2s;
+
+  &:hover{
+    filter: brightness(0.95);
+  }
+}

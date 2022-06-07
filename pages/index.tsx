@@ -8,17 +8,18 @@ import { Sidenav } from '../src/components/Sidenav'
 
 const Home: NextPage = () => {
   return (
-      <div className={`${styles.grid} ${styles['grid-template-areas']}`}>
-        <Head>
-          <title>Horas Liquídas</title>
-          <meta name="description" content="Cronômetro de horas liquídas de estudos, site que marcar as horas que o estudante está devidamente focado, aprendendo." />
-        </Head>
+    <>
+      <Head>
+        <title>Horas Liquídas</title>
+        <meta name="description" content="Cronômetro de horas liquídas de estudos, site que marcar as horas que o estudante está devidamente focado, aprendendo." />
+      </Head>
 
+      <div className={`${styles.grid} ${styles['grid-template-areas']}`}>
         <Header />
         <Sidenav />
         <Main />
       </div>
-
+    </>
   )
 }
 

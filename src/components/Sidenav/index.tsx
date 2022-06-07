@@ -4,7 +4,7 @@ import { ActiveLink } from '../ActiveLink';
 
 export function Sidenav() {
     return (
-        <div className={`sidenav ${styles.sidebarContainer}`}>
+        <div className={`${styles.sidebarContainer} sidenav`}>
             <div className={styles.menu}>
                 <img src='/images/iconMenu.svg' alt='Icone Menu Horas Liquídas'/>
                 <p>Menu</p>
@@ -24,12 +24,11 @@ export function Sidenav() {
                 </ul>
             </nav>
 
-            <div className={styles.sessionHelpContainer}>
-                
+            <div className={styles.sessionHelpContainer}>               
                 <div className={styles.sessionHelp}>
                     <img className={styles.iconInterrogacao} src='/images/iconInterrogacao.svg' />
                     <p>Precisa de ajuda?</p>
-                    <button>Veja como usar</button>
+                    <a href='/comousar'><button>Veja como usar</button></a>
                 </div>
             </div>
         </div>

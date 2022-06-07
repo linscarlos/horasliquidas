@@ -3,10 +3,10 @@ import returnTemporizador from "./[dataTemporizador]";
 import { Controls } from "./Controls/Controls"; 
 import { Timer } from "./Timer/Timer"; 
 import { parseCookies, setCookie } from 'nookies';
+import styles from "./styles.module.scss";
 
 
 // VARIAVEIS DE CONTROLE
-let counterTemp = 0;
 let counterStats = 0;
 let controlTemporizador = true;
 
@@ -37,14 +37,20 @@ export function Counter(){
           const music = new Audio('/audios/StopWatch.mp3');
 
           // VERIFICAÇÃO SE temporizadorResult EXISTE, NESSE CASO VAI INICIAR A OPÇÃO TEMPORIZADOR
-          if(counterTemp < temporizadorResult){
+          if(counterStats < temporizadorResult){
             if(controlTemporizador){
 
               const handleTemp = () => {
-                if(counterTemp < temporizadorResult){
-                  setTime((time) => time - 10)
-                  counterTemp = counterTemp + 10;
-                  counterStats = counterStats + 10
+                if(counterStats < temporizadorResult){
+
+                  // VERIFICAR SE O USUÁRIO ESTÁ NA ABA OU SAIU DELA
+                  if(document.hidden === true){
+                    setTime((time) => time - 1000);
+                    counterStats = counterStats + 1000;
+                  } else {
+                    setTime((time) => time - 10);
+                    counterStats = counterStats + 10;
+                  }
                 } else {
                   music.play();
                   handleSave();
@@ -66,9 +72,16 @@ export function Counter(){
 
           // LOGICA PARA O CRÔNOMETRO INICIAR
           } else if (isActive && isPaused === false) {
-              intervall = setInterval(() => {
-                setTime((time) => time + 10);
-                counterStats = counterStats + 10;
+              intervall = setInterval(() => { 
+
+                if(document.hidden === true){
+                  setTime((time) => time + 1000);
+                  counterStats = counterStats + 1000;
+                } else {
+                  setTime((time) => time + 10);
+                  counterStats = counterStats + 10;
+                }
+
               }, 10);
             } else {
               clearInterval(intervall);
@@ -99,7 +112,6 @@ export function Counter(){
           setIsActive(false);
           setTime(0);
           controlTemporizador = true;
-          counterTemp = 0;
           counterStats = 0;
         };
 
@@ -127,19 +139,22 @@ export function Counter(){
 
         // CONDIÇÃO PARA REPASSAR AO <TIMER /> SE O USUÁRIO ESCOLHEU A OPÇÃO TEMPORIZADOR
         {temporizadorResult && (controlStart = (true))}
+
         
 
         return (
+          <div className={styles.counterMain}>
           <>
-            <Timer time={time} controlStart={controlStart} handleStart={handleStart}/>
-            <Controls
-              isActive={isActive}
-              isPaused={isPaused}
-              handleStart={handleStart}
-              handlePauseResume={handlePauseResume}
-              handleReset={handleReset}
-              handleSave={handleSave}
-            />
+              <Timer time={time} controlStart={controlStart} handleStart={handleStart}/>
+              <Controls
+                isActive={isActive}
+                isPaused={isPaused}
+                handleStart={handleStart}
+                handlePauseResume={handlePauseResume}
+                handleReset={handleReset}
+                handleSave={handleSave}
+              />
           </>
+          </div>
         );
 }

@@ -18,7 +18,7 @@ export function Main() {
                 <div className={styles.buttonsMain}>
                         <a href='/'><button><img src='/images/iconStopWatch.svg' alt='Icone Cronômetro' />Cronômetro</button></a>
                         <span className={styles.separatorButton}></span>
-                        <button onClick={openModal}><img src='/images/iconSandClock.svg' alt='Icone Temporizador'/>Temporizador</button>
+                        <a><button onClick={openModal}><img src='/images/iconSandClock.svg' alt='Icone Temporizador'/>Temporizador</button></a>
                 </div>
                 
                 <Counter />

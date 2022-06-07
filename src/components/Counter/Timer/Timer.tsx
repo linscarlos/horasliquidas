@@ -21,7 +21,7 @@ export function Timer({ time, controlStart, handleStart }: Time) {
 
     return (
         <>
-      <p className={styles.timer}>
+      <p id='titleTimer' className={styles.timer}>
         {Math.floor((time / 3600000) % 60) >= 1 && (<span>
           {("0" + Math.floor((time / 3600000) % 60)).slice(-2)}:
         </span>)}

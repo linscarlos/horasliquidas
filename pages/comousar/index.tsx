@@ -3,20 +3,20 @@ import Head from 'next/head'
 import styles from '../../styles/Home.module.scss'
 import { Header } from '../../src/components/Header'
 import { Sidenav } from '../../src/components/Sidenav'
-import MainStats from './stats' 
+import MainComoUsar from './comousar'
 
 const Home: NextPage = () => {
 
   return (
       <div className={`${styles.grid} ${styles['grid-template-areas']}`}>
         <Head>
-          <title>Estatísticas | Horas Líquidas</title>
-          <meta name="description" content="Acompanhe suas estatísticas de estudos no site Horas Líquidas." />
+          <title>Como Usar o Horas Líquidas?</title>
+          <meta name="description" content="Aprenda como utilizar o site horas líquidas." />
         </Head>
 
         <Header />
         <Sidenav />
-        <MainStats />
+        <MainComoUsar />
         
       </div>
   )
