@@ -8,9 +8,9 @@ O Horas Liquídas é um projeto voltado para estudandes de modo geral, que desej
 ## 📱 Imagens do Projeto Mobile
 
 <div align="center">
-<img src="https://github.com/linscarlos/horasliquidas/blob/main/public/images/screen/mobile3.png" width="300px" />
-<img src="https://github.com/linscarlos/horasliquidas/blob/main/public/images/screen/mobile.png" width="300px" />
-<img src="https://github.com/linscarlos/horasliquidas/blob/main/public/images/screen/mobile2.png" width="300px" />
+<img src="https://github.com/linscarlos/horasliquidas/blob/main/public/images/screen/mobile3.png" width="250px" />
+<img src="https://github.com/linscarlos/horasliquidas/blob/main/public/images/screen/mobile.png" width="250px" />
+<img src="https://github.com/linscarlos/horasliquidas/blob/main/public/images/screen/mobile2.png" width="250px" />
 </div>
 
 ## 🛠️ Tecnologias Utilizadas
