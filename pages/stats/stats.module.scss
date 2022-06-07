@@ -40,3 +40,16 @@
         }
     }
 }
+
+@media (max-width: 768px){
+    .mainContainer {
+        max-width: 100%;
+        .mainContent{
+            .mainStats{
+                position: relative; 
+                height:40vh; 
+                width:80vw;
+            }      
+        }
+    }
+}

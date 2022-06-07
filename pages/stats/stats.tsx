@@ -10,6 +10,7 @@ import {
     Tooltip,
     Legend,
   } from 'chart.js';
+import { useEffect } from 'react';
 
 export default function MainStats() {
 
@@ -48,15 +49,31 @@ export default function MainStats() {
         },
       };
 
+      let tela = null;
+      let heightBar = 0;
+
+      useEffect(() => {
+       tela = window.screen.width;
+
+        console.log(tela)
+
+        if(tela < 768){
+          heightBar = 400;
+        } else{
+          heightBar = 150
+        }
+      }, [])
+
+
     return (
         <>
         <main className={`${styles.mainContainer} content`}>
             <div className={styles.mainContent}>
                 <div className={styles.mainStats}>
-                    <Bar options={options} data={data} width={400}></Bar>
+                    <Bar options={options} data={data} width={400} height={heightBar} redraw={true}></Bar>
                 </div>
                 <div className={styles.mainStats}>
-                    <Bar options={options30} data={data30} width={400} redraw={true}></Bar>
+                    <Bar options={options30} data={data30} width={400} height={heightBar} redraw={true}></Bar>
                 </div>
             </div>
         </main>
