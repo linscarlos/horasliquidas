@@ -7,7 +7,7 @@ export default function MainComoUsar() {
         <main className={`${styles.mainContainer} content`}>
             <div className={styles.mainContent}>
                 <div className={styles.containerComoUsar}>
-                    <h1>Como usar o Horas Liquidas</h1>
+                    <h1>Como usar o Horas Líquidas</h1>
 
                     <p>O funcionamento do site é muito simples, existem duas opções para contabilizar o tempo de estudo. O <strong>Crônometro</strong> e o <strong>Temporizador</strong> veja como utilizar cada um deles:</p>
 

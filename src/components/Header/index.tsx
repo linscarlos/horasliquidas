@@ -25,8 +25,8 @@ export function Header() {
 
 
                     <a href='/' className={styles.logo}>
-                        <img src='/images/logoHorasLiquidas.svg' alt='Logo Horas Liquidas'/>
-                        <h1 className={styles.text}>Horas Liquidas</h1>
+                        <img src='/images/logoHorasLiquidas.svg' alt='Logo Horas Líquidas'/>
+                        <h1 className={styles.text}>Horas Líquidas</h1>
                     </a>
 
             </div>
