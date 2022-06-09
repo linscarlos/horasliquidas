@@ -10,8 +10,8 @@ const Home: NextPage = () => {
   return (
       <div className={`${styles.grid} ${styles['grid-template-areas']}`}>
         <Head>
-          <title>Como Usar o Horas Líquidas?</title>
-          <meta name="description" content="Aprenda como utilizar o site horas líquidas." />
+          <title>Como Usar o Horas Liquidas?</title>
+          <meta name="description" content="Aprenda como utilizar o site horas liquidas." />
         </Head>
 
         <Header />

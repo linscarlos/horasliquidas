@@ -10,7 +10,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Horas Liquídas</title>
+        <title>Horas Liquidas</title>
         <meta name="description" content="Cronômetro de horas liquídas de estudos, site que marcar as horas que o estudante está devidamente focado, aprendendo." />
       </Head>
 
